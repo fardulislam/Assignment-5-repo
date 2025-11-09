@@ -52,7 +52,7 @@ for(let callbutton of callbtn){
     else{
       coin=0;
       navcoin.textContent=coin;
-      alert('you have not enaf coin')
+      alert('You have not enough coin')
       return;
     }
 
