@@ -33,6 +33,8 @@ loveicon.forEach((btn)=>{
 
 for(let callbutton of callbtn){
   callbutton.addEventListener('click',function(){
+
+    alert('card click');
     // product title //
     const cardtitle = callbutton.parentNode.parentNode.children[1].innerText;
     console.log(cardtitle)
