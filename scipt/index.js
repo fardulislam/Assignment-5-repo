@@ -8,6 +8,13 @@ const copybtn = document.querySelectorAll('.copyBtn');
 const navicon = document.getElementById('life');
 const loveicon = document.querySelectorAll('.love-icon');
 
+const clearbtn = document.getElementById('clearbtn');
+const callbtn = document.getElementsByClassName('callbtn');
+
+ const cardcontainer = document.getElementById('card-container')
+
+ const navcoin =document.getElementById('coin');
+let coin =100;
 
      copybtn.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -22,9 +29,8 @@ loveicon.forEach((btn)=>{
   })
 })
 
-let coin =100;
 
-const callbtn = document.getElementsByClassName('callbtn');
+
 for(let callbutton of callbtn){
   callbutton.addEventListener('click',function(){
     // product title //
@@ -37,7 +43,7 @@ for(let callbutton of callbtn){
 
     // navber coin btn //
       
-    const navcoin =document.getElementById('coin');
+    
     console.log(navcoin)
     if(coin>20){
       coin-=20;
@@ -53,7 +59,7 @@ for(let callbutton of callbtn){
      const now = new Date();
     const timeString = now.toLocaleTimeString();
 
-    const cardcontainer = document.getElementById('card-container')
+   
     const newcard = document.createElement('div')
     newcard.innerHTML=`
     <div class="p-2 flex justify-between items-center rounded-sm bg-gray-100 ">
@@ -69,6 +75,12 @@ for(let callbutton of callbtn){
     cardcontainer.append(newcard)
   })
 }
+
+clearbtn.addEventListener('click',function(){
+  cardcontainer.innerHTML='';
+  coin=100;
+  navcoin.textContent=coin;
+})
 
 
 
